@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Nodejs | Using Express.js
+    style
+      include ../style/style.css
+  body(id="home")
+    div(class="centre")
+      header
+        nav
+          a(class="btn selected" href="/") Home
+          a(class="btn" href="/about") About
+          a(class="btn" href="/contact") Contact
+
+      h1(id="heading1") Using Express.js
+      p using nodejs
+      button(type="button" onclick="getNinjas()") Request data
+      ul(id="result")
+    

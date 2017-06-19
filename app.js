@@ -1,17 +1,19 @@
 const express = require('express')
 const app = express()
 
+app.set('view engine', 'pug')
+
 // basic static requests... 
 app.get('/', (req, res) => {
-  res.sendFile('views/index.html')
+  res.render('index')
 })
 
 app.get('/contact', (req, res) => {
-  res.sendFile('views/contact.html')
+  res.render('contact')
 })
 
 app.get('/about', (req, res) => {
-  res.sendFile('views/about.html')
+  res.render('about')
 })
 
 // example of a dynamic request... 
