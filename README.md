@@ -6,4 +6,4 @@ Expressjs first steps
 - added app.js
 - added Express.js package.
 
-
+- added basic routing to app.js
