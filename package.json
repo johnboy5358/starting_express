@@ -4,7 +4,8 @@
   "description": "A first step into Express.js with the netNinja",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
   },
   "devDependencies": {},
   "scripts": {
