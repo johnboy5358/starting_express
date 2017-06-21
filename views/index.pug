@@ -12,10 +12,16 @@ html
         nav
           a(class="btn selected" href="/") Home
           a(class="btn" href="/about") About
+          a(class="btn" href="/profiles") Profiles
           a(class="btn" href="/contact") Contact
 
       h1(id="heading1") Using Express.js
       p using nodejs
-      button(type="button" onclick="getNinjas()") Request data
-      ul(id="result")
-    
+      a(href="/profile/2") Hannibal
+      br
+      button(id="getProfile" onClick="getProfile(3)") get a profile
+      p(id="result")
+
+      script
+        include ../scripts/script.js
+        

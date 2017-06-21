@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Expressjs |= profiles
+    style
+      include ../style/style.css
+  body(id="profile")
+    div(class="centre")
+      header
+        nav
+          a(class="btn" href="/") Home
+          a(class="btn" href="/about") About
+          a(class="btn selected" href="/profiles") Profiles
+          a(class="btn" href="/contact") Contact
+
+      h1 Meet the team
+      table(id="profiles")
+        thead
+          tr
+            th Name
+            th Age
+            th Gender
+            th Comment
+        each val in JSON.parse(profiles)
+          tr
+            td= val.name
+            td= val.age
+            td= val.gender
+            td= val.comments

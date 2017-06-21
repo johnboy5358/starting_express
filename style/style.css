@@ -63,15 +63,38 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
 h1:hover {
   cursor: pointer;
 }
+
 p {
   color: cornflowerblue;
 }
+
 h1, p {
   text-align: center;
 }
 .color-red {
   color: red;
+}
+table#profiles {
+  width: 96%;
+  margin: auto;
+}
+
+thead {
+  background-color: gold;
+}
+
+thead tr th {
+  padding: .25em;
+}
+
+tr:nth-child(even) {
+  background-color: lightyellow;
+}
+
+td {
+  padding: .25em .5em;
 }
