@@ -5,11 +5,25 @@ function getProfile(id){
   const xhttp = new XMLHttpRequest()
   xhttp.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
-      console.log(this.responseText)
-      console.log(typeof this.responseText)
       const dat = JSON.parse(this.responseText)
       console.log(dat)
-      const htmlDat = `<span>${dat.person.name}</span>`
+      const htmlDat = `
+        <table id="profiles">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>${dat.person.name}</td>
+              <td>${dat.person.age}</td>
+              <td>${dat.person.comments}</td>
+            </tr>
+          </tbody>
+        </table>`
       document.getElementById("result").innerHTML = htmlDat
     }
   };
