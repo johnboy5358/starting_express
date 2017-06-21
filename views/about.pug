@@ -1,19 +1,10 @@
 doctype html
 html
   head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    title Nodejs | piping html
-    style
-      include ../style/style.css
-  body(id="contact")
+    include includes/headContent.pug
+  body(id="about")
     div(class="centre")
-      header
-        nav
-          a(class="btn" href="/") Home
-          a(class="btn selected" href="/about") About
-          a(class="btn" href="/profiles") Profiles
-          a(class="btn" href="/contact") Contact
+      include includes/nav.pug
 
       h1(id="heading1") About
       p Hire a web ninja for all your development needs.

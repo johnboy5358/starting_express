@@ -1,23 +1,15 @@
 doctype html
 html
   head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    title Nodejs | Using Express.js
-    style
-      include ../style/style.css
+    include includes/headContent.pug
   body(id="home")
     div(class="centre")
-      header
-        nav
-          a(class="btn selected" href="/") Home
-          a(class="btn" href="/about") About
-          a(class="btn" href="/profiles") Profiles
-          a(class="btn" href="/contact") Contact
+      include includes/nav.pug
 
       h1(id="heading1") Using Express.js
       p using nodejs
       a(href="/profile/2") Hannibal
+      br
       br
       button(id="getProfile" onClick="getProfile(3)") get a profile
       p(id="result")

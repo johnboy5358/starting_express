@@ -14,7 +14,7 @@ const queryId = id => dbBoys.filter(boy => boy.id === id)
 app.set('view engine', 'pug')
 
 // basic static requests... 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.render('index')
 }).get('/contact', (req, res) => {
   res.render('contact')
