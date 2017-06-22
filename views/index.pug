@@ -3,17 +3,17 @@ html
   head
     include includes/headContent.pug
   body(id="home")
+    include includes/nav.pug
     div(class="centre")
-      include includes/nav.pug
 
       h1(id="heading1") Using Express.js
       p using nodejs
-      a(href="/profile/2") Hannibal
+      p(id="result")
+      br
+      br
+      a(href="/profiles/2") Hannibal
       br
       br
       button(id="getProfile" onClick="getProfile(3)") get a profile
-      p(id="result")
 
-      script
-        include ../scripts/script.js
-        
+      script(src="scripts/script.js")        

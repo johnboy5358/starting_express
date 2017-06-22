@@ -3,8 +3,12 @@ html
   head
     include includes/headContent.pug
   body(id="contact")
+    include includes/nav.pug
     div(class="centre")
-      include includes/nav.pug
 
       h1(id="heading1") Contact
       p for more information you can use the form below to contact me.
+      br
+      br
+      a(href="contact/?name=hamish&job=Astrophysicist") Find a contact
+

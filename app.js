@@ -12,11 +12,17 @@ const dbBoys = [
 const queryId = id => dbBoys.filter(boy => boy.id === id)
 
 app.set('view engine', 'pug')
+console.log('$: ', __dirname)
+// app.use(express.static(__dirname + '/public'))
+// app.use('/static', express.static(__dirname + 'public'))
+app.use(express.static('public'))
 
 // basic static requests... 
 app.get('/home', (req, res) => {
   res.render('index')
 }).get('/contact', (req, res) => {
+  const qry = req.query
+  console.log(qry)
   res.render('contact')
 }).get('/about', (req, res) => {
   res.render('about')
@@ -25,7 +31,7 @@ app.get('/home', (req, res) => {
 })
 
 // example of a dynamic request... 
-app.get('/profile/:id', (req, res) => {
+app.get('/profiles/:id', (req, res) => {
   res.render('profiles', {profiles: JSON.stringify(queryId(req.params.id))})
 })
 // a request to an api
@@ -34,3 +40,4 @@ app.get('/api/team/:id', (req, res) => {
 })
 
 app.listen(3000)
+console.log('Your express app is running on localhost:3000')

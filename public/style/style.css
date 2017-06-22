@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: #57a79a;
   width: 99vw;
 }
 
@@ -62,7 +63,7 @@ nav {
 }
 
 h1 {
-  color: #56a79a;
+  color: black;
   font-size: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -73,7 +74,7 @@ h1:hover {
 }
 
 p {
-  color: cornflowerblue;
+  color: black;
 }
 
 h1, p {
