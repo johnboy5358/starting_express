@@ -4,9 +4,14 @@ html
     include includes/headContent.pug
   body(id="profiles")
     include includes/nav.pug
-    div(class="centre")
+    - const team = JSON.parse(profiles)
 
-      h1 Meet the team
+    div(class="centre")
+      - if (team.length === 1)
+        h1 Meet #{team[0].name}
+      - else
+        h1 Meet the team
+      br
       table(id="profiles")
         thead
           tr
@@ -14,7 +19,7 @@ html
             th Age
             th Gender
             th Comment
-        each val in JSON.parse(profiles)
+        each val in team
           tr
             td= val.name
             td= val.age
