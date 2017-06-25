@@ -21,7 +21,38 @@ html
             th Comment
         each val in team
           tr
-            td= val.name
-            td= val.age
-            td= val.gender
-            td= val.comments
+            td(class="id" hidden)= val.id
+            td(class="name")= val.name
+            td(class="age")= val.age
+            td(class="gender")= val.gender
+            td(class="comments")= val.comments
+            td(class="email" hidden="hidden")= val.email
+
+      form(id="contact-selected" class="" method="POST" action="/profiles")
+        h2(class="hdg") Contact team member
+        p
+          label(for="name") Name: 
+          input(type="text" name="name" id="name")
+        p
+          label(for="email") Email: 
+          input(type="text" name="email" id="email")
+        hr
+        p
+          label(for="name") Your name: 
+          input(type="text" name="your-name" id="your-name" placeholder="enter your name")
+        p
+          label(for="email") Your email: 
+          input(type="text" name="your-email" id="your-email" placeholder="enter your email")
+        p
+          label(for="your-msg") Your message
+          br
+          textArea(name="your-msg" placeholder="please enter your message" rows="5")
+        p
+          input(type="submit" id="submit" class="btn submit" value="Submit")
+        p
+          span(class="response") #{response}
+
+
+
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="scripts/script.js")

@@ -92,6 +92,15 @@ thead {
   background-color: gold;
 }
 
+tbody tr:hover {
+  cursor: pointer;
+  background-color: cornflowerblue;
+}
+
+tr.selected {
+  background-color: cornflowerblue !important;
+}
+
 thead tr th {
   padding: .25em;
 }
@@ -102,4 +111,49 @@ tr:nth-child(even) {
 
 td {
   padding: .25em .5em;
+}
+
+#contact-selected {
+  display: none;
+  width: 96%;
+  margin: auto;
+  padding: 1em;
+  min-height: 25em;
+  background-color: cornflowerblue;
+  border: solid 2px white;
+  border-radius: 5px;
+}
+
+#contact-selected.visible {
+  display: block;
+}
+
+#contact-selected .hdg {
+  text-align: center;
+}
+
+#contact-selected p {
+  text-align: left;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+#contact-selected label {
+  display: inline-block;
+  width: 5em;
+}
+
+#contact-selected textarea {
+  width: 100%;
+}
+
+.btn.submit {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+/* reponse */
+#response .center {
+  display: flex;
+  justify-content: center;
 }

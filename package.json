@@ -4,6 +4,7 @@
   "description": "A first step into Express.js with the netNinja",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.2"
   },

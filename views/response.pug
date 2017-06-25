@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    include includes/headContent.pug
+  body(id="response")
+    include includes/nav.pug
+    div(class="centre")
+      h1(id="heading1") Thank you #{name}
+      p(class="response") #{actionBy} will #{respond}
